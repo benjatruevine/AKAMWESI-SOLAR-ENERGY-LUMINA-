@@ -1,0 +1,271 @@
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <__next_root_layout_boundary__>
+      <SegmentViewNode type="layout" pagePath="layout.tsx">
+        <SegmentTrieNode>
+        <link>
+        <script>
+        <script>
+        <RootLayout>
+          <html lang="en" data-scroll-behavior="smooth" className="inter_c15e...">
+            <body className="flex min-h...">
+              <script>
+              <script>
+              <a>
+              <CartProvider>
+                <SiteHeader>
+                  <header className="sticky top...">
+                    <div>
+                    <div className="border-b b...">
+                      <div className="container-...">
+                        <Logo>
+                        <nav>
+                        <div className="flex items...">
+                          <form action="/products" method="get" role="search" className="hidden ite...">
+                            <label>
+                            <div className="relative">
+                              <Search>
+                              <input
+                                id="header-search"
+                                name="q"
+                                type="search"
+                                placeholder="Search products"
+                                autoComplete="off"
+                                className="h-11 w-52 rounded-full border border-navy-100 bg-navy-50/60 pr-3 pl-9 text-..."
+-                               data-sharkid="__0"
+                              >
+                          ...
+                      ...
+                    <div className="fixed inse..." aria-hidden={true}>
+                      <div>
+                      <div role="dialog" aria-modal="true" aria-label="Site menu" className="absolute t...">
+                        <div>
+                        <div className="scrollbar-...">
+                          <form action="/products" method="get" role="search" className="mb-5">
+                            <label>
+                            <div className="relative">
+                              <Search>
+                              <input
+                                id="mobile-search"
+                                name="q"
+                                type="search"
+                                placeholder="Search products"
+                                autoComplete="off"
+                                className="h-11 w-full rounded-full border border-navy-100 bg-navy-50/60 pr-3 pl-9 tex..."
+-                               data-sharkid="__1"
+                              >
+                          ...
+                        ...
+                ...
+                ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <__next_root_layout_boundary__>
+      <SegmentViewNode type="layout" pagePath="layout.tsx">
+        <SegmentTrieNode>
+        <link>
+        <script>
+        <script>
+        <RootLayout>
+          <html lang="en" data-scroll-behavior="smooth" className="inter_c15e...">
+            <body className="flex min-h...">
+              <script>
+              <script>
+              <a>
+              <CartProvider>
+                <SiteHeader>
+                  <header className="sticky top...">
+                    <div>
+                    <div className="border-b b...">
+                      <div className="container-...">
+                        <Logo>
+                        <nav>
+                        <div className="flex items...">
+                          <form action="/products" method="get" role="search" className="hidden ite...">
+                            <label>
+                            <div className="relative">
+                              <Search>
+                              <input
+                                id="header-search"
+                                name="q"
+                                type="search"
+                                placeholder="Search products"
+                                autoComplete="off"
+                                className="h-11 w-52 rounded-full border border-navy-100 bg-navy-50/60 pr-3 pl-9 text-..."
+-                               data-sharkid="__0"
+                              >
+                          ...
+                      ...
+                    ...
+                ...
+                ...
+ 
+⨯ ReferenceError: howToStart is not defined
+    at Hero (src\components\hero.tsx:113:16)
+  111 |             </h2>
+  112 |             <ol className="mt-6 space-y-5">
+> 113 |               {howToStart.map((step) => (
+      |                ^
+  114 |                 <li key={step.step} className="flex gap-4">
+  115 |                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-solar-500 text-sm font-bold text-navy-950">
+  116 |                     {step.step} {
+  digest: '476490244'
+}
+[browser] Uncaught ReferenceError: howToStart is not defined
+    at Hero (src\components\hero.tsx:113:16)
+  111 |             </h2>
+  112 |             <ol className="mt-6 space-y-5">
+> 113 |               {howToStart.map((step) => (
+      |                ^
+  114 |                 <li key={step.step} className="flex gap-4">
+  115 |                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-solar-500 text-sm font-bold text-navy-950">
+  116 |                     {step.step}
+⨯ ReferenceError: howToStart is not defined
+    at Hero (src\components\hero.tsx:113:16)
+  111 |             </h2>
+  112 |             <ol className="mt-6 space-y-5">
+> 113 |               {howToStart.map((step) => (
+      |                ^
+  114 |                 <li key={step.step} className="flex gap-4">
+  115 |                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-solar-500 text-sm font-bold text-navy-950">
+  116 |                     {step.step} {
+  digest: '476490244'
+}
+[browser] Uncaught ReferenceError: howToStart is not defined
+    at Hero (src\components\hero.tsx:113:16)
+  111 |             </h2>
+  112 |             <ol className="mt-6 space-y-5">
+> 113 |               {howToStart.map((step) => (
+      |                ^
+  114 |                 <li key={step.step} className="flex gap-4">
+  115 |                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-solar-500 text-sm font-bold text-navy-950">
+  116 |                     {step.step}
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <__next_root_layout_boundary__>
+      <SegmentViewNode type="layout" pagePath="layout.tsx">
+        <SegmentTrieNode>
+        <link>
+        <script>
+        <script>
+        <RootLayout>
+          <html lang="en" data-scroll-behavior="smooth" className="inter_c15e...">
+            <body className="flex min-h...">
+              <script>
+              <script>
+              <a>
+              <CartProvider>
+                <SiteHeader>
+                  <header className="sticky top...">
+                    <div>
+                    <div className="border-b b...">
+                      <div className="container-...">
+                        <Logo>
+                        <nav>
+                        <div className="flex items...">
+                          <form action="/products" method="get" role="search" className="hidden ite...">
+                            <label>
+                            <div className="relative">
+                              <Search>
+                              <input
+                                id="header-search"
+                                name="q"
+                                type="search"
+                                placeholder="Search products"
+                                autoComplete="off"
+                                className="h-11 w-52 rounded-full border border-navy-100 bg-navy-50/60 pr-3 pl-9 text-..."
+-                               data-sharkid="__0"
+                              >
+                          ...
+                      ...
+                    ...
+                ...
+                ...
+ 
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <__next_root_layout_boundary__>
+      <SegmentViewNode type="layout" pagePath="layout.tsx">
+        <SegmentTrieNode>
+        <link>
+        <script>
+        <script>
+        <RootLayout>
+          <html lang="en" data-scroll-behavior="smooth" className="inter_c15e...">
+            <body className="flex min-h...">
+              <script>
+              <script>
+              <a>
+              <CartProvider>
+                <SiteHeader>
+                  <header className="sticky top...">
+                    <div>
+                    <div className="border-b b...">
+                      <div className="container-...">
+                        <Logo>
+                        <nav>
+                        <div className="flex items...">
+                          <form action="/products" method="get" role="search" className="hidden ite...">
+                            <label>
+                            <div className="relative">
+                              <Search>
+                              <input
+                                id="header-search"
+                                name="q"
+                                type="search"
+                                placeholder="Search products"
+                                autoComplete="off"
+                                className="h-11 w-52 rounded-full border border-navy-100 bg-navy-50/60 pr-3 pl-9 text-..."
+-                               data-sharkid="__0"
+                              >
+                          ...
+                      ...
+                    ...
+                ...
+                ...
+ 
