@@ -3,6 +3,8 @@ import { categories } from "@/data/categories";
 import { products } from "@/data/products";
 import { site } from "@/data/site";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url.replace(/\/$/, "");
   const lastModified = new Date();

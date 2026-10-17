@@ -4,12 +4,22 @@ export function cn(...values: Array<string | false | null | undefined>): string 
 }
 
 /**
+ * Sub-path the site is served from (e.g. `/AKAMWESI-SOLAR-ENERGY-LUMINA-` on
+ * GitHub project pages). Inlined at build time by Next.js from `next.config.ts`.
+ * Empty when the site is served from the domain root.
+ */
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+/**
  * Build a public URL for a file in /public/assets.
  * The supplied asset filenames contain spaces and parentheses, so they are
  * safely encoded for use in `src` attributes and social metadata.
+ *
+ * `basePath` is prepended because Next.js does not rewrite `/public` asset
+ * paths (nor `next/image` `src`) when a `basePath` is configured.
  */
 export function asset(fileName: string): string {
-  return `/assets/${encodeURI(fileName)}`;
+  return `${basePath}/assets/${encodeURI(fileName)}`;
 }
 
 const ugxFormatter = new Intl.NumberFormat("en-UG", {
